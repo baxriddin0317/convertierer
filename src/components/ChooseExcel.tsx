@@ -50,7 +50,7 @@ const ChooseExcel = ({setXlsFile, xlsFile}: Props) => {
 
   return (
     <div 
-      className={`bg-transparent rounded-lg w-full border-[3px] border-dashed py-12 px-2 ${
+      className={`bg-transparent rounded-lg w-full border-[3px] border-dashed py-8 px-2 ${
         isDragging || xlsFile ? 'border-blue-600' : 'border-brand-gray-100'
         }`}
       onDragEnter={handleDragEnter}
@@ -61,12 +61,12 @@ const ChooseExcel = ({setXlsFile, xlsFile}: Props) => {
       <div className="flex flex-col items-center justify-between h-full text-center text-brand-black-100">
         <div className='flex flex-col items-center'>
           <img src='excel.svg' alt='file' />
-          <p className="mt-8 md:mt-12 text-sm md:text-base">Select an Excel file as the desired output structure or drag and drop it here</p>
+          {!xlsFile && <p className="mt-8 text-sm">Select an Excel file as the desired output structure or drag and drop it here</p>}
           {xlsFile && <p className='text-sm md:text-base mt-3'>
             {xlsFile.name}
           </p>}
         </div>
-        <label htmlFor="fileExcel" className="h-12 max-w-[411px] w-full rounded-full bg-white flex items-center justify-center cursor-pointer text-sm font-bold md:text-base py-2.5 mt-7">
+        <label htmlFor="fileExcel" className="h-12 max-w-[411px] w-full rounded-full bg-white flex items-center justify-center cursor-pointer text-sm font-bold md:text-base py-2.5 mt-7 lg:mt-4">
         <span>Choose a file (.xls or .xlsx)</span>
         </label>
       </div>

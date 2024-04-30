@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply min-h-screen font-trebuchet !bg-main bg-no-repeat h-full pb-4
+  @apply min-h-screen font-trebuchet !bg-main bg-no-repeat h-full
 }
 
 @font-face {

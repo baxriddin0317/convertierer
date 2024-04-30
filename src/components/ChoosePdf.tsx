@@ -54,7 +54,7 @@ const ChoosePdf = ({setPdfFiles, pdfFiles}: Props) => {
 
   return (
     <div 
-      className={`bg-transparent rounded-lg w-full border-[3px] border-dashed py-12 px-2 ${
+      className={`bg-transparent rounded-lg w-full border-[3px] border-dashed py-8 px-2 ${
         isDragging || pdfFiles.length>0 ? 'border-blue-600' : 'border-brand-gray-100'
         }`}
       onDragEnter={handleDragEnter}
@@ -65,14 +65,14 @@ const ChoosePdf = ({setPdfFiles, pdfFiles}: Props) => {
       <div className="flex flex-col items-center justify-between h-full w-full text-center text-brand-black-100">
         <div className='flex flex-col items-center'>
           <img className='h-[78px] object-cover' src='file.png' alt='file' />
-          <p className="mt-8 md:mt-12 text-sm md:text-base">Select PDF files or drag and drop them here</p>
-          <div className='flex mt-3 flex-col text-sm md:text-base'>
-            {pdfFiles.length> 0 && pdfFiles.map((pdf,idx) => (
+          {!(pdfFiles.length > 0) && <p className="mt-8 text-sm md:text-base">Select PDF files or drag and drop them here</p>}
+          <div className='flex mt-3 flex-col text-sm'>
+            {pdfFiles.length > 0 && pdfFiles.map((pdf,idx) => (
               <p key={idx}>{pdf.name}</p>
             ))}
           </div>
         </div>
-        <label htmlFor="fileInput" className="h-12 max-w-[411px] w-full rounded-full bg-white flex items-center justify-center cursor-pointer text-sm font-bold md:text-base py-2.5 mt-7">
+        <label htmlFor="fileInput" className="h-12 max-w-[411px] w-full rounded-full bg-white flex items-center justify-center cursor-pointer text-sm font-bold md:text-base py-2.5 mt-7 lg:mt-4">
           <span>Choose a file (.pdf)</span>
         </label>
       </div>
