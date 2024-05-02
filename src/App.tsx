@@ -5,7 +5,7 @@ import Output from './components/Output';
 
 function App() {
   return (
-    <main className='flex flex-col gap-20 lg:gap-0 lg:h-screen justify-between py-4'>
+    <main className='flex flex-col gap-20 lg:gap-10 lg:h-screen justify-between py-4'>
       {/* title */}
       <section className='px-4'>
         <h1 className='text-white font-bold text-2xl md:text-4xl lg:text-5xl text-center'>

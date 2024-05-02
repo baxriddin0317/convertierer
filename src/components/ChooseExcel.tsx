@@ -50,7 +50,7 @@ const ChooseExcel = ({setXlsFile, xlsFile}: Props) => {
 
   return (
     <div 
-      className={`bg-transparent rounded-lg w-full border-[3px] border-dashed py-8 px-2 ${
+      className={`bg-transparent rounded-lg w-full border-[3px] border-dashed py-5 px-2 ${
         isDragging || xlsFile ? 'border-blue-600' : 'border-brand-gray-100'
         }`}
       onDragEnter={handleDragEnter}
