@@ -8,6 +8,12 @@ body {
   @apply min-h-screen font-trebuchet !bg-main bg-no-repeat h-full
 }
 
+@media (min-height: 800px) {
+  .main {
+    @apply lg:h-screen
+  }
+}
+
 @font-face {
   font-family: 'Trebuchet MS';
   src: url('fonts/TrebuchetMS.woff') format('woff2'),
